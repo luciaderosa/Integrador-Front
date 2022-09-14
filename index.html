@@ -8,15 +8,18 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>CodoACodo</title>
 </head>
 
 <body>
+    <!-- Background image and mask-->
     <header class="bg-img" style="background-image: url(./img/ba1.jpg); height: 100vh; background-size:cover;">
         <div class="mask d-flex flex-column justify-content-between text-white"
             style="background-color: rgba(0, 0, 0, 0.65);height: 100vh;">
-            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#333a40;">
-                <!--333a40-->
+    <!-- Nabbar top menu-->        
+            <nav class="navbar navbar-expand-lg navbar-dark menu-top-bg">
+
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
                         <img src="./img/codoacodo.png" alt="" height=58 class="d-inline-block align-middle">
@@ -50,6 +53,7 @@
                     </div>
                 </div>
             </nav>
+            <!-- Transparent card -->
             <div class="card text-end bg-transparent align-self-center align-self-sm-end me-5 mb-5 w-50">
                 <div class="card-body">
                     <h3 class="card-title">Conf Bs As</h3>
@@ -69,6 +73,7 @@
     <main id="oradores" class="container">
         <h5 class="text-center my-3">CONOCE A LOS</h5>
         <h1 class="text-center my-3">ORADORES</h1>
+        <!-- Speakers cards -->
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card h-100">
@@ -108,6 +113,7 @@
     </main>
 
     <section id="honolulu">
+        <!-- Horizontal card Honolulu -->
         <div class="card my-3 bg-secondary">
             <div class="row g-0">
                 <div class="col-md-6 border border-white">
@@ -131,6 +137,7 @@
         <p class="text-center my-3">Anótate como orador para dar una <abbr
                 title="Charla motivadora de 5 minutos de duración">charla ignite</abbr>.¡Cuéntanos de qué quieres
             hablar!</p>
+        <!-- Become a speaker form -->
         <form action="">
             <div class="row mb-3">
                 <div class="col me-3">
@@ -146,13 +153,15 @@
             <div class="form-text text-align-start mb-3">Recuerda incluir un título para tu charla.</div>
             <div class="d-grid mb-3">
                 <!-- <button type="submit" class="btn btn-success">Enviar</button> //#96c93e -->
-                <button type="submit" class="btn text-white" style="background-color:#96c93e">Enviar</button>
+                <button type="submit" class="btn btn-lemon-green text-white">Enviar</button>
             </div>
         </form>
     </section>
 
-    <footer style="background-color:#1e516e;">
+    <footer class="menu-footer-bg">
         <div class="container w-75">
+            <!-- En la maqueta este menú de links está centrado y tiene dos items que se parten en dos
+            renglones cuando se va achicando el vp-->
             <nav class="nav justify-content-center nav-pills flex-column flex-lg-row flex-nowrap">
                 <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Preguntas frecuentes</a>
                 <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Contáctanos</a>
