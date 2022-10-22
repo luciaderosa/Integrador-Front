@@ -1,25 +1,25 @@
 /* función que va al top de la página cuando se presiona el botón flecha*/
-// Get the button:
-const mybutton = document.getElementById("back-to-top");
-// When the user scrolls down 20px from the top of the document, show the button
+
+const botonTop = document.getElementById("vuelve-arriba");
+// Cuando se da scroo en  20px desde el top empieza a mostrar el botón
 window.onscroll = function () {
   scrollFunction();
 };
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+    botonTop.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    botonTop.style.display = "none";
   }
 }
-// When the user clicks on the button, scroll to the top of the document
+// Click sobre botón amarillo, te lleva al comienzo del documento
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.body.scrollTop = 0; // Safari
+  document.documentElement.scrollTop = 0; // demás navegadores
 }
 /*------------------------------------------------------------------------------*/
-const ventaPrecio = 200; //preico sin descuento del ticket
+const ventaPrecio = 200; //precio sin descuento del ticket
 const ventaDescuentos = [1.0, 0.2, 0.5, 0.85]; //multiplicador según categoría descuentos.
 
 const ventaNombre = document.getElementById("ventaNombre");
@@ -66,14 +66,10 @@ function validarVenta() {
 
 function calculaTotalVenta() {
   let index = Number(ventaCategoria.value);
-  let calculo =
-    parseFloat(ventaCantidad.value) * ventaPrecio * ventaDescuentos[index];
+  let calculo = parseFloat(ventaCantidad.value) * ventaPrecio * ventaDescuentos[index];
 
   ventaMensajes.className = "alert alert-primary";
-  ventaMensajes.innerHTML =
-    "Total a Pagar: " +
-    " " +
-    new Intl.NumberFormat("es-AR", {
+  ventaMensajes.innerHTML = "Total a Pagar: " + " " + new Intl.NumberFormat("es-AR", {
       style: "currency",
       currency: "ARS",
     }).format(calculo);
