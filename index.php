@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <script src="https://kit.fontawesome.com/2c70cbcd4f.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css" />
-  <title>CodoACodo</title>
-</head>
+<?php include 'includes/header.php' ?>
 
 <body>
   <!-- Background image and mask-->
@@ -166,24 +153,24 @@
       <abbr title="Charla motivadora de 5 minutos de duración">charla ignite</abbr>.¡Cuéntanos de qué quieres hablar!
     </p>
     <!-- Become a speaker form -->
-    <form>
+    <form action="guardar2.php" method="POST">
       <div class="row mb-md-3">
         <div class="row mb-3 mx-auto col-md me-md-3">
-          <input type="text" class="form-control" id="nombre" placeholder="Nombre" />
+          <input type="text" class="form-control" name="nombre" placeholder="Nombre del orador" />
         </div>
         <div class="row mb-3 mx-auto col-md">
-          <input type="text" class="form-control" id="apellido" placeholder="Apellido" />
+          <input type="text" class="form-control" name="apellido" placeholder="Apellido del Orador" />
         </div>
       </div>
       <div class="mb-1">
-        <textarea class="form-control" placeholder="¿Sobre qué quieres hablar?" rows="3"></textarea>
+        <textarea class="form-control" placeholder="¿Sobre qué quieres hablar?" rows="3" name="contenido"></textarea>
       </div>
       <div class="form-text text-align-start mb-3">
         Recuerda incluir un título para tu charla.
       </div>
       <div class="d-grid mb-3">
         <!-- <button type="submit" class="btn btn-success">Enviar</button> //#96c93e -->
-        <button id="botonEnviar" type="button" class="btn btn-lemon-green text-white">
+        <button id="botonEnviar" type="submit" value="guardar2" class="btn btn-lemon-green text-white">
           Enviar
         </button>
         <div class="mt-2">
@@ -267,7 +254,6 @@
       </form>
     </div>
   </section>
-
   <footer class="menu-footer-bg">
     <div class="container w-75">
       <!-- En la maqueta este menú de links está centrado y tiene dos items que se parten en dos
@@ -279,24 +265,10 @@
         <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Conferencias</a>
         <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Términos y condiciones</a>
         <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Privacidad</a>
-        <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Estudiantes</a>
+        <a class="flex-lg-fill text-sm-center nav-link text-white" href="oradores/vista.php" target="_blank">Uso Interno</a>
       </nav>
     </div>
   </footer>
-  <!--JS propio-->
-  <script src="scripts.js"></script>
-  <!-- Optional JavaScript; choose one of the two! -->
-
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-</body>
-
-</html>
+<?php
+  include 'includes/footer.php';
+  ?>
